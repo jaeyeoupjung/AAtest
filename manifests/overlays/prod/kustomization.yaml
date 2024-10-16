@@ -13,4 +13,4 @@ kind: Kustomization
 namePrefix: prod-
 images:
 - name: ceappacr.azurecr.io/aztest
-  newTag: "202410151406"
+  newTag: "202410160006"
