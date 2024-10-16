@@ -1,31 +1,31 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: aztest 
+  name: aatest
 spec:
   replicas: 1
   template:
     spec:
       containers:
-        - name: aztest 
+        - name: aatest
           command: ["java","-jar","/app.jar"]
           args: ["--spring.config.location=file:/config/application.yml"]
           volumeMounts:
-          - mountPath: /mnt/aztest
-            name: aztest-volume
+          - mountPath: /mnt/aatest
+            name: aatest-volume
             readOnly: false
-            subPath: aztest
+            subPath: aatest
           - mountPath: /config
             name: application-properties
             readOnly: true
                           
       volumes:
-      - name: aztest-volume
+      - name: aatest-volume
         persistentVolumeClaim:
           claimName: ce-aa-pvc
       - name: application-properties
         configMap:
-          name: aztest-configmap
+          name: aatest-configmap
           items:
             - key: application.yml
               path: application.yml
