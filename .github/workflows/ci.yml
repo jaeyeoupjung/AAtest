@@ -1,9 +1,9 @@
-name: aztest CI with Maven
+name: aatest CI with Maven
 
 on: workflow_dispatch
 
 env:
-  IMAGE_NAME: aztest
+  IMAGE_NAME: aatest
 
 jobs:
   build:

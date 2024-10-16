@@ -1,19 +1,19 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: aztest 
+  name: aatest
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: aztest
+      app: aatest
   template:
     metadata:
       labels:
-        app: aztest 
+        app: aatest
     spec:
       containers:
-        - name: aztest 
-          image: ceappacr.azurecr.io/aztest
+        - name: aatest
+          image: ceappacr.azurecr.io/aatest
           ports:
           - containerPort: 8080

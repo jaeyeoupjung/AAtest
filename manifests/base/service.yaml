@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-    name: aztest
+    name: aatest
 spec:
     ports:
     - port: 8080 
     selector:
-        app: aztest
+        app: aatest

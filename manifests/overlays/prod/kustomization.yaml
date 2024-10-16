@@ -1,7 +1,7 @@
 configMapGenerator:
 - files:
   - application.yml
-  name: aztest-configmap
+  name: aatest-configmap
 resources:
 - ../../base
 - pvc.yaml
